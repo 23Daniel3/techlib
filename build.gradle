@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+}
+
+group = 'com.techmaker' // Identificador único do pacote
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            url = uri("https://maven.pkg.github.com/seu-usuario/TechMakerLib")
+            credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_ACTOR")
+                password = project.findProperty("gpr.key") ?: System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
+}

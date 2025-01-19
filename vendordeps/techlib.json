@@ -1,0 +1,18 @@
+{
+    "name": "techlib",
+    "version": "1.0.0",
+    "uuid": "123e4567-e89b-12d3-a456-426614174000",
+    "mavenUrls": [
+        "https://maven.pkg.github.com/seu-usuario/TechMakerLib"
+    ],
+    "jsonUrl": "https://raw.githubusercontent.com/seu-usuario/TechMakerLib/main/vendordeps/TechMakerLib.json",
+    "javaDependencies": [
+        {
+            "groupId": "com.techlib",
+            "artifactId": "techlib",
+            "version": "1.0.0",
+            "type": "jar",
+            "classifier": ""
+        }
+    ]
+}
